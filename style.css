@@ -1,39 +1,41 @@
-* {
-	margin: auto 0;
-	padding: 0;
-}
 body {
 	background-color: lightsteelblue;
 }
 #main {
-	max-width: 500px;
-	margin: auto;
-	padding: 3%;
-	text-align: center;
 	font-family: "Barlow Semi Condensed", sans-serif;
 	display: grid;
+	grid-template-areas:
+		"header header header  header"
+		"main main . sidebar"
+		"footer footer footer footer";
 }
 #title {
 	font-family: "Roboto", sans-serif;
-	margin: 3%;
-	padding: 2%;
 	font-family: "Barlow Semi Condensed", sans-serif;
+	grid-area: header;
 }
 h1,
 p {
 	font-family: "Barlow Semi Condensed", sans-serif;
 	background-color: rgba(255, 255, 255, 0.473);
 	padding: 15px;
+	grid-area: main;
 }
 #img-div {
-	/* 	height: 50%;
-	width: 80%; */
+	border-style: double;
+	height: auto;
+	width: 100%;
+	padding-top: 2%;
+	grid-area: sidebar;
 }
 #image {
+	grid-area: sidebar;
 }
 #img-caption {
+	grid-area: sidebar;
 }
 #tribute-info {
 }
 #tribute-link {
+	grid-area: footer;
 }
